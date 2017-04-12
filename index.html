@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <title>CorkDev.io - Cork's community tech meetup</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link href="/styles/site.css" rel="stylesheet">
+    <style>
+    #event-description b {
+      font-size: 20px;
+    }
+    #event-description img {
+      max-width: 400px
+    }
+    </style>
+  </head>
+  <body>
+    <div id="sydjs-wrapper" id="events">
+      <div id="easter-egg" style="display: none;">
+        <div id="old-logo"></div>
+      </div>
+      <header role="banner" id="sydjs-nav">
+        <nav role="navigation" class="navbar navbar-default navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <ul class="nav navbar-nav">
+                <li class="nav-item-home active"><a href="#events">Events</a></li>
+                <li class="nav-item-meetups"><a href="#location">Location</a></li>
+                <li class="nav-item-blog"><a href="#videos">Videos</a></li>
+              </ul>
+              <button type="button" data-toggle="collapse" data-target=".navbar-headernav-collapse" class="navbar-toggle navbar-toggle-menu navbar-toggle-left"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+              </button><a href="/" title="Back to Home" class="navbar-logo"><img src="/images/logo.png" alt="corkdev.io logo" width="120" height="112"></a>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div id="sydjs-body">
+        <section class="section home-meetup">
+          <div class="home-meetup-wrapper">
+            <div class="container">
+              <h5 id="last-or-next"></h5>
+                <h1><a class="event-url" id="event-title"></a></h1>
+                <div class="row">
+                  <div class="col-sm-8" id="event-description">
+                  </div>
+                  <div class="col-sm-4">
+                    <dl class="dl-horizontal home-meetup__details-list">
+                      <dt>
+                        <div class="sr-only">People Attending</div><span class="entypo entypo-fixed-width entypo-user"></span>
+                      </dt>
+                      <dd><span id="event-attendees"></span>. <a class="event-url">Please RSVP.</a></dd>
+                      <dt>
+                        <div class="sr-only">Date</div><span class="entypo entypo-fixed-width entypo-calendar"></span>
+                      </dt>
+                      <dd id="event-date"></dd>
+                      <dt>
+                        <div class="sr-only">Time</div><span class="entypo entypo-fixed-width entypo-clock"></span>
+                      </dt>
+                      <dd>6:30pm - 8:00pm</dd>
+                      <dt>
+                        <div class="sr-only">Place</div><span class="entypo entypo-fixed-width entypo-location"></span>
+                      </dt>
+                      <dd>Level 3, Sample Studios, Former Government Buildings, Sullivan's Quay</dd>
+                    </dl>
+                    <hr class="line-dashed">
+                    <p><a href="http://www.meetup.com/corkdev-io/" class="text-muted">All our meetups &rarr;</a></p>
+                    <aside class="advertisement">
+                      <figure>
+                        <figcaption>advertisement</figcaption><a><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"/></a>
+                      </figure>
+                    </aside>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="home-meetup-map" id="location">
+            <div id="meetup-map" class="map"></div><a href="https://maps.google.com/?daddr=Level 3, Sample Studios, Former Government Buildings, Sullivan's Quay" target="_blank" class="directions-button"><span class="entypo entypo-popup"></span> Get Directions</a>
+          </div>
+        </section>
+        <section class="section home-about">
+          <div class="container">
+            <h2>In Cork and into Web Development?<br><br>On the second Tuesday of the month you'll find us talking about what we're doing &mdash; and what's happening around us &mdash; in the world of Web Development.</h2>
+            <p><a href="https://twitter.com/corkdev" data-show-count="true" data-size="large" class="twitter-follow-button">Follow @corkdev</a></p>
+          </div>
+        </section>
+        <section class="section home-blog">
+          <div class="container">
+            <div itemscope itemtype="http://schema.org/Blog" class="blog">
+              <h2 style="text-align: center;" id="videos">Videos</h2>
+              <div id="youtube-videos"></div>
+
+              <hr class="line-dashed">
+              <p><a href="https://www.youtube.com/playlist?list=PLWPNy8uJbLcvgP__TCrOUDscdFbjJVKo9" target="_blank" class="text-muted">See all corkdev.io videos &rarr;</a></p>
+            </div>
+          </div>
+        </section>
+        <!--
+        <section class="section home-links">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-4"><a href="/members/organisations" class="link-icon-badge"><span class="link-icon entypo entypo-globe"></span></a>
+                <h2 class="home-links__heading"><a href="/members/organisations">Organisations</a></h2>
+                <p>Cork's leading web technology companies. The organisations that are not satisfied to simply use JavaScript and best in new web practices — but are ready to meet the next trend before it happens. </p>
+              </div>
+              <div class="col-sm-4"><a href="/members" class="link-icon-badge"><span class="link-icon entypo entypo-users"></span></a>
+                <h2 class="home-links__heading"><a href="/members">Members</a></h2>
+                <p>Professionals, hackers, architects, software enginners. We are passionate about development, the web, new practices, culture, and up-coming technology. </p>
+              </div>
+              <div class="col-sm-4"><a href="/links" class="link-icon-badge"><span class="link-icon entypo entypo-link"></span></a>
+                <h2 class="home-links__heading"><a href="/links">Links</a></h2>
+                <p>Got a favourite CDN? A favourite library? A micro-library? We do! And you'll find some of them linked here. </p>
+                <p>Take a deep breath and dive deep into web dev culture! </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-4">
+                <p><a href="/members/organisations" class="home-links-anchor">See who sponsors corkdev.io </a></p>
+              </div>
+              <div class="col-sm-4">
+                <p><a href="/members" class="home-links-anchor">Find out who's involved in corkdev.io </a></p>
+              </div>
+              <div class="col-sm-4">
+                <p><a href="/links" class="home-links-anchor">View links</a></p>
+              </div>
+            </div>
+          </div>
+        </section>
+      -->
+      </div>
+      <div id="sydjs-footer">
+        <div class="container">
+          <p>Copyright &copy; 2015 corkdev.io</p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="/js/lib/jquery/jquery-1.10.2.min.js"></script>
+  <script src="/js/lib/bootstrap/collapse.js"></script>
+  <script src="/js/lib/bootstrap/dropdown.js"></script>
+  <script src="/js/site.js"></script>
+  <!-- twitter-->
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANpAolrk2ZuQPDtG9xzst3ZYiswiYan00&sensor=false&libraries=places"></script>
+  <script>
+    jQuery(function($) {
+     // MAP STYLES
+     var styles = {
+      paledawn: [{"featureType":"water","stylers":[{"visibility":"on"},{"color":"#acbcc9"}]},{"featureType":"landscape","stylers":[{"color":"#f2e5d4"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#c5c6c6"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#e4d7c6"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#fbfaf7"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#c5dac6"}]},{"featureType":"administrative","stylers":[{"visibility":"on"},{"lightness":33}]},{"featureType":"road"},{"featureType":"poi.park","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":20}]},{},{"featureType":"road","stylers":[{"lightness":20}]}],
+      paper: [{"featureType":"administrative","stylers":[{"visibility":"on"}]},{"featureType":"poi","stylers":[{"visibility":"simplified"}]},{"featureType":"road","stylers":[{"visibility":"simplified"}]},{"featureType":"water","stylers":[{"visibility":"simplified"}]},{"featureType":"transit","stylers":[{"visibility":"simplified"}]},{"featureType":"landscape","stylers":[{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"visibility":"off"}]},{"featureType":"road.local","stylers":[{"visibility":"on"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"visibility":"on"}]},{"featureType":"road.arterial","stylers":[{"visibility":"off"}]},{"featureType":"water","stylers":[{"color":"#5f94ff"},{"lightness":26},{"gamma":5.86}]},{},{"featureType":"road.highway","stylers":[{"weight":0.6},{"saturation":-85},{"lightness":61}]},{"featureType":"road"},{},{"featureType":"landscape","stylers":[{"hue":"#0066ff"},{"saturation":74},{"lightness":100}]}],
+      midnight: [{"featureType":"water","stylers":[{"color":"#021019"}]},{"featureType":"landscape","stylers":[{"color":"#08304b"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#0c4152"},{"lightness":5}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#0b434f"},{"lightness":25}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#0b3d51"},{"lightness":16}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"}]},{"elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"elementType":"labels.text.stroke","stylers":[{"color":"#000000"},{"lightness":13}]},{"featureType":"transit","stylers":[{"color":"#146474"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#144b53"},{"lightness":14},{"weight":1.4}]}],
+      redalert: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#ffdfa6"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#b52127"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#c5531b"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#74001b"},{"lightness":-10}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#da3c3c"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#74001b"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#da3c3c"}]},{"featureType":"road.local","elementType":"geometry.fill","stylers":[{"color":"#990c19"}]},{"elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"elementType":"labels.text.stroke","stylers":[{"color":"#74001b"},{"lightness":-8}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#6a0d10"},{"visibility":"on"}]},{"featureType":"administrative","elementType":"geometry","stylers":[{"color":"#ffdfa6"},{"weight":0.4}]},{"featureType":"road.local","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]}]
+     };
+     var styledMap = {
+      paledawn: new google.maps.StyledMapType(styles.paledawn, { name: "Pale Dawn" }),
+      paper: new google.maps.StyledMapType(styles.paper, { name: "Paper" }),
+      midnight: new google.maps.StyledMapType(styles.midnight, { name: "Midnight Commander" }),
+      redalert: new google.maps.StyledMapType(styles.redalert, { name: "Red Alert" }),
+      normal: new google.maps.StyledMapType(styles.normal, { name: "Normal Map" })
+     };
+
+     // MAP OPTIONS
+     var location = new google.maps.LatLng(51.895500,-8.474064);
+     var mapOptions = {
+      zoom: 16,
+      center: location,
+      scrollwheel: false,
+      disableDefaultUI: true,
+      zoomControl: true,
+      zoomControlOptions: {
+       style: google.maps.ZoomControlStyle.DEFAULT
+      },
+      mapTypeControlOptions: {
+       mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+      }
+     }
+     // LOAD MAP
+     var map = new google.maps.Map(document.getElementById("meetup-map"), mapOptions);
+     map.mapTypes.set('map_style', styledMap.paledawn);
+     map.setMapTypeId('map_style');
+
+     var marker = new google.maps.Marker({
+      position: location,
+      title:""
+     });
+
+     // Add the marker to the map
+     marker.setMap(map);
+     // Info window
+     var infowindow = new google.maps.InfoWindow({
+      content: 'Level 3, Sample Studios, Former Government Buildings, Sullivan\'s Quay'
+     });
+     google.maps.event.addListener(marker, 'click', function() {
+      infowindow.open(map,marker);
+     });
+    });
+  </script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-47407155-1', 'corkdev.io');
+    ga('send', 'pageview');
+  </script>
+</html>
